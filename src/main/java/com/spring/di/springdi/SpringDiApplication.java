@@ -2,6 +2,7 @@ package com.spring.di.springdi;
 
 import com.spring.di.springdi.controllers.ConstructorInjectedController;
 import com.spring.di.springdi.controllers.MyController;
+import com.spring.di.springdi.controllers.ProfileGreetingController;
 import com.spring.di.springdi.controllers.PropertyInjectedController;
 import com.spring.di.springdi.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
@@ -33,6 +34,9 @@ public class SpringDiApplication {
 		System.out.println("-----------Property Controller:");
 		System.out.println(propertyInjectedController.getGreeting());
 
+		ProfileGreetingController profileGreetingController = (ProfileGreetingController) ctx.getBean("profileGreetingController");
+		System.out.println("-----------Profile Controller:");
+		System.out.println(profileGreetingController.getGreeting());
 	}
 
 }
