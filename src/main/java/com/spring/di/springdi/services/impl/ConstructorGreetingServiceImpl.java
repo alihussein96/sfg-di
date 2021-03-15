@@ -4,9 +4,9 @@ import com.spring.di.springdi.services.GreetingService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class ConstructorGreetingServiceImpl implements GreetingService {
     @Override
     public String sayHello() {
-        return "hello world";
+        return "hello world -- Constructor";
     }
 }
