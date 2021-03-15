@@ -1,10 +1,12 @@
 package com.spring.di.springdi.controllers;
 
 import com.spring.di.springdi.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
 
-    GreetingService greetingService;
+    private final GreetingService greetingService;
 
     public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
