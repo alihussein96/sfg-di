@@ -1,9 +1,6 @@
 package com.example.di;
 
-import com.example.di.controllers.ConstructorInjectedController;
-import com.example.di.controllers.MyController;
-import com.example.di.controllers.PropertyInjectedController;
-import com.example.di.controllers.SetterInjectedController;
+import com.example.di.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -28,6 +25,10 @@ public class DiApplication {
 		System.out.println("--------- Constructor");
 		ConstructorInjectedController constructorController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController"); // spring framework goes ahead and gets an instance of this object
 		System.out.println(constructorController.getGreeting());
+
+		System.out.println("--------- Profiles");
+		I188nController languageController = (I188nController) ctx.getBean("i188nController"); // spring framework goes ahead and gets an instance of this object
+		System.out.println(languageController.sayHello());
 
 	}
 
